@@ -9,6 +9,8 @@
   --bg-color-grey: #f5f4fa;
   --bg-color-white: #ffffff;
   --bg-color-dark: #2f303a;
+
+  --icon-color: #afb1b8;
 }
 
 *,
@@ -122,12 +124,22 @@ img {
   color: var(--text-color-second);
   letter-spacing: 0.02em;
   line-height: 1.14;
+  display: flex;
+    align-items: center;
 }
 
 .link:hover,
 .link:focus {
   color: var(--color-blue);
   outline: none;
+}
+.icon-contact {
+  margin: 10px;
+}
+
+.link:hover .icon-contact,
+.link:focus .icon-contact{
+  fill: var(--color-blue);
 }
 
 /* Герой */
@@ -136,6 +148,14 @@ img {
   background: var(--bg-color-dark);
   text-align: center;
   padding: 200px 0;
+  background-image: linear-gradient(to right, #2f303a40, #2f303a40),
+    url("./../images/bg_hero.jpg");
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -205,6 +225,16 @@ img {
   margin-right: 0;
 }
 
+.advantage-icon-wrapper {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--bg-color-grey);
+}
+
 .advantage-points {
   font-size: 14px;
   font-weight: 700;
@@ -272,11 +302,11 @@ img {
   display: flex;
 }
 
-.team-list li {
+.team-list > li {
   margin-right: 30px;
 }
 
-.team-list li:last-child {
+.team-list > li:last-child {
   margin-right: 0;
 }
 
@@ -305,6 +335,89 @@ img {
   letter-spacing: 0.03em;
   line-height: 1.19;
   color: var(--text-color-second);
+  margin-bottom: 16px;
+}
+
+.soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soc-item {
+  margin-right: 10px;
+}
+
+.soc-item:last-child {
+  margin-right: 0;
+}
+
+.soc-link:focus,
+.soc-link:hover {
+  background-color: var(--color-blue);
+}
+
+.soc-link:focus .icon,
+.soc-link:hover .icon {
+  fill: var(--text-color-white);
+}
+
+.soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon {
+  fill: var(--icon-color);
+}
+
+/* Клиенты */
+
+.clients {
+  padding: 94px 0;
+}
+
+.client-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.17;
+
+  margin-bottom: 50px;
+}
+
+.client-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid var(--icon-color);
+}
+
+.client-link:hover, 
+.client-link:focus {
+  border-color: var(--color-blue);
+}
+.client-link:hover .client-icon, 
+.client-link:focus .client-icon{
+  fill: var(--color-blue);
+}
+
+.client-icon {
+  fill: var(--icon-color);
+  
 }
 
 /* Футер */
@@ -362,6 +475,33 @@ img {
   color: var(--color-blue);
   outline: none;
 }
+.join-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+
+.soc-link-footer {
+  background-color: #ffffff10;
+}
+
+.soc-link-footer .icon {
+  fill: var(--text-color-white);
+}
+
+.footer-box {
+  display: flex;
+}
+
+.address {
+  margin-right: 70px;
+}
 
 /* Портфолио кнопки */
 
@@ -404,8 +544,7 @@ img {
 .portfolio-button:focus {
   background: var(--color-blue);
   color: var(--bg-color-white);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   outline: none;
 }
 
@@ -421,6 +560,10 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
+.card-element:hover,
+.card-element:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
 
 .card-element:nth-child(3n) {
   margin-right: 0;
